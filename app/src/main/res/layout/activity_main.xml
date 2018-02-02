@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lakshay.braintrainer.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="500dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="5dp">
+
+        <RelativeLayout
+            android:id="@+id/gamelayout"
+            android:layout_width="368dp"
+            android:layout_height="500dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:text="30s" />
+
+            <TextView
+                android:id="@+id/Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/Question"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="11dp"
+                android:layout_marginRight="11dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/Question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Timer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="51dp"
+                android:text=" Brain Trainer"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Question"
+                android:layout_marginLeft="49dp"
+                android:layout_marginStart="49dp"
+                android:layout_marginTop="48dp"
+                android:layout_toEndOf="@+id/Timer"
+                android:layout_toRightOf="@+id/Timer"
+                android:onClick="game"
+                android:tag="0"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/option1"
+                android:layout_alignLeft="@+id/option4"
+                android:layout_alignStart="@+id/option4"
+                android:onClick="game"
+                android:tag="1"
+                android:textSize="18sp"
+                android:layout_alignTop="@+id/option1" />
+
+            <Button
+                android:id="@+id/option3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/option1"
+                android:layout_alignStart="@+id/option1"
+                android:layout_below="@+id/option1"
+                android:layout_marginTop="21dp"
+                android:onClick="game"
+                android:tag="2"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/option4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:onClick="game"
+                android:tag="3"
+                android:textSize="18sp"
+                android:layout_alignBaseline="@+id/option3"
+                android:layout_alignBottom="@+id/option3"
+                android:layout_toRightOf="@+id/option3"
+                android:layout_toEndOf="@+id/option3" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/winnerlayout"
+            android:layout_width="368dp"
+            android:layout_height="160dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="345dp">
+
+            <Button
+                android:id="@+id/playagain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:onClick="start"
+                android:text="Start" />
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click to Start Game"
+                android:textSize="18sp"
+                android:layout_above="@+id/playagain"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
